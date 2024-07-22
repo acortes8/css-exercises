@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 img {
@@ -10,6 +11,7 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
 }
 
 /* do not edit this footer */
@@ -23,4 +25,41 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+/* My solution that seems overly complicated compared to simpler solution
+originally had another parent container that held both the title and card-container,
+but that was not necessary if we just used text align in the body selector.
+
+.information-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  
+}
+
+.card-container {
+  display: flex;
+  gap: 52px;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 200px;
+}
+  */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.card {
+  max-width: 200px;
 }
